@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="page-header">
+        <h1>{{titulo}}</h1>
+    </div>
+    <ul class="list-group">
+        <li *ngFor="let auto of autos" class="list-group-item">
+            <h4>{{auto.marca}} {{auto.modelo}} {{auto.anio}}</h4>
+            <a [routerLink]="['/auto',auto._id]" type="button" class="btn btn-primary">Ver</a>
+            <a type="button" class="btn btn-warning">Modificar</a>
+            <a type="button" class="btn btn-danger">Eliminar</a>
+        </li>
+    </ul>
+</div>
+
+<!--
+<ul>
+    <li>{{marca}}</li>
+    <li>{{modelo}}</li>
+    <li>{{anio}}</li>
+</ul>
+
+<h1> Nuestro Arreglo </h1>
+
+<ul id="autos">
+    <li *ngFor="let marca of marcas">{{marca}}</li>
+</ul>
+
+<div class="container" [ngClass]="['borderYellow']">
+    <button *ngIf="esVisible==false"
+            (click)="muestraMarcas()">
+            Mostrar Marcas
+    </button>
+
+    <button *ngIf="esVisible==true"
+            (click)="escondeMarcas()">
+            Esconder Marcas
+    </button>
+
+    <ul id="autos" *ngIf="esVisible==true">
+        <li *ngFor="let marca of marcas">{{marca}}</li>
+    </ul>
+</div>
+
+<div class="container">
+    Marca: <input type="text" [(ngModel)]="marca"/>
+    <br/>
+    Modelo: <input type="text" [(ngModel)]="modelo"/>
+    <br/>
+    Año: <input type="text" [(ngModel)]="anio"/>
+    <br/>
+    <div class="container" [ngClass]="{borderRed:marca === 'Nissan',borderYellow:marca === 'Mazda',borderBlue: marca === 'Toyota'}">
+    <ul>
+        <li>{{marca}}</li>
+        <li>{{modelo}}</li>
+        <li>{{anio}}</li>
+    </ul>
+    </div>
+</div>
+-->
